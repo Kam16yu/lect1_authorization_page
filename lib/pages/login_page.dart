@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:lect1_page_authorization/pages/home.dart';
 
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
-
-  // This widget is the home page of your application
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -16,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   String login = '';
   String password = '';
   bool _isChecked = false;
-  //Open hive box
+  //Open Hive box
   final authBox = Hive.box('authorizationBox');
 
   @override
@@ -25,7 +22,6 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         title: const Text('Вхід'),
       ),
-      
       body: Center(
         child: SizedBox(
           width: 350.0,
@@ -70,10 +66,13 @@ class _LoginPageState extends State<LoginPage> {
                         },
                       )),
                   TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.lightBlue),
                       onPressed: () {
                         checkData();
                       },
-                      child: const Text("Далі"))
+                      child: const Text("Далі",
+                          style: TextStyle(fontSize: 18, color: Colors.white)))
                 ],
               )
             ],
@@ -85,12 +84,12 @@ class _LoginPageState extends State<LoginPage> {
 
   //Alert dialog
   showAlertDialog() {
-    // Set up the button
+    // Set up button
     Widget okButton = TextButton(
       child: const Text("OK"),
       onPressed: () => Navigator.pop(context),
     );
-    // Set up the AlertDialog
+    // Set up AlertDialog
     AlertDialog alert = AlertDialog(
       title: const Text("Помилка"),
       content: const Text('Помилка в логіні або паролі'),
@@ -112,6 +111,7 @@ class _LoginPageState extends State<LoginPage> {
   void checkData() {
     if (login == 'admin' && password == '123456') {
       if (_isChecked == true) {
+        //change authorization status
         authBox.put(0, true);
       }
       Navigator.of(context).pushReplacement(MaterialPageRoute(

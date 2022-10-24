@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //Unlogin button
         appBar: AppBar(actions: [
           TextButton(
             style: TextButton.styleFrom(
@@ -19,7 +20,9 @@ class HomePage extends StatelessWidget {
               textStyle: const TextStyle(fontSize: 15),
             ),
             onPressed: () {
+              //Open Hive box
               final authBox = Hive.box('authorizationBox');
+              //change authorization status
               authBox.put(0, false);
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (BuildContext context) => const LoginPage()));
@@ -29,5 +32,4 @@ class HomePage extends StatelessWidget {
         ]),
         body: const Center(child: Text('Вітаю!')));
   }
-  // This widget is the home page of your application
 }

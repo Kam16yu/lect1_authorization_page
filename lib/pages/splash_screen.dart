@@ -13,18 +13,19 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  final authBox = Hive.box('authorizationBox');
 
   @override
   void initState() {
     super.initState();
     //Enter fullscreen mode
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    //Opening Hive database box
+    final authBox = Hive.box('authorizationBox');
     //Timer for 3 seconds, then go to Login page
     Timer(const Duration(seconds: 3), () {
-      //Exit full screen
+      //Exit fullscreen mode
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-      //Go to Login page
+      //Go to home or login page
       if (authBox.get(0) != null && authBox.get(0)) {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (BuildContext context) => const HomePage()));
