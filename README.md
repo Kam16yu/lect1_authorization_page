@@ -1,4 +1,4 @@
-#Authorization page project
+# Authorization page project
 
 Implemented splash screen, login and main page.
 Hive was used to check authorization.
