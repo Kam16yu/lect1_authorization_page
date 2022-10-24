@@ -1,16 +1,13 @@
-# lect1_page_authorization
+#Authorization page project
 
-A new Flutter project.
+Implemented splash screen, login and main page.
+Hive was used to check authorization.
 
-## Getting Started
+Splash screen
+<p align="center"><img src="https://user-images.githubusercontent.com/91286611/197494971-fdd97195-28b9-481d-8d1d-03483f739ce3.png"></p>
 
-This project is a starting point for a Flutter application.
+Login page
+<p align="center"><img src="https://user-images.githubusercontent.com/91286611/197495127-ee49c664-cb6c-404d-9cfa-66ca522aaf16.png"></p>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Main page
+<p align="center"><img src="https://user-images.githubusercontent.com/91286611/197496967-71952b0a-a416-4b97-88ed-88fa0af518de.png"></p>
