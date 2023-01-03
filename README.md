@@ -1,4 +1,5 @@
 # Authorization page project
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
 Implemented splash screen, login and main page.
 Hive was used to check authorization.
